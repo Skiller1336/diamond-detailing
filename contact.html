@@ -1,8 +1,36 @@
+<script>
+// Вземаме параметъра ?service=... от URL и избираме услугата
+const urlParams = new URLSearchParams(window.location.search);
+const selectedService = urlParams.get('service');
+if (selectedService) {
+    const serviceDropdown = document.querySelector('#service');
+    for (let option of serviceDropdown.options) {
+        if (option.value === selectedService) {
+            option.selected = true;
+            break;
+        }
+    }
+}
+
+// Съществуващ скрипт за subject
+const form = document.querySelector('form');
+form.addEventListener('submit', function() {
+    const name = document.querySelector('#name').value;
+    const phone = document.querySelector('#phone').value;
+    const service = document.querySelector('#service').value;
+    const date = document.querySelector('#date').value;
+    const time = document.querySelector('#time').value;
+
+    const subject = `Diamond Detailing Varna – Ново записване: ${service} на ${date} ${time} – ${name} ${phone}`;
+    document.querySelector('#hidden-subject').value = subject;
+});
+</script>
+
 <!DOCTYPE html>
 <html lang="bg">
 <head>
     <meta charset="UTF-8">
-    <title>Контакти | Diamond Detailing</title>
+    <title>Запази час | Diamond Detailing</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -22,49 +50,50 @@
 
 <section>
     <div class="container">
-        <h2>Контакти</h2>
-        <p>📍 Варна, кв. Левски</p>
-        <p>📞 +359 896 764 039</p>
-        <p>🕙 Всеки ден: 10:00 – 18:00</p>
+        <h2>Запази час</h2>
+
+        <form class="booking-form">
+            <label>Избрана услуга</label>
+            <select id="service" required>
+                <option value="">-- Избери услуга --</option>
+                <option>Външно измиване</option>
+                <option>Външно + пране на салон</option>
+                <option>Пълен салон + табло</option>
+                <option>Пълен детайлинг + моторен кош</option>
+                <option>Външно полиране</option>
+            </select>
+
+            <label>Дата</label>
+            <input type="date" id="date" required>
+
+            <label>Час</label>
+            <input type="time" id="time" required>
+
+            <label>Име</label>
+            <input type="text" id="name" placeholder="Вашето име" required>
+
+            <label>Телефон</label>
+            <input type="tel" id="phone" placeholder="+359..." required>
+
+            <label>Автомобил</label>
+            <input type="text" id="car" placeholder="Марка и модел">
+
+            <button type="submit">Изпрати запитване</button>
+        </form>
     </div>
 </section>
 
 <footer>
-    <p>Diamond Detailing</p>
+    <p>📞 +359 896 764 039</p>
 </footer>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const service = params.get('service');
+if (service) {
+    document.getElementById('service').value = service;
+}
+</script>
 
 </body>
 </html>
-
-<section>
-    <div class="container">
-        <h2>Запази час</h2>
-
-        <form>
-            <p>
-                <input type="text" placeholder="Вашето име" required>
-            </p>
-            <p>
-                <input type="tel" placeholder="Телефон" required>
-            </p>
-            <p>
-                <select required>
-                    <option value="">Избери услуга</option>
-                    <option>Външно измиване</option>
-                    <option>Външно + салон</option>
-                    <option>Пълен детайлинг</option>
-                    <option>Полиране</option>
-                </select>
-            </p>
-            <p>
-                <input type="date" required>
-            </p>
-
-            <button class="button" type="submit">Изпрати</button>
-        </form>
-
-        <p style="margin-top:20px;">
-            или се обади директно: <strong>+359 896 764 039</strong>
-        </p>
-    </div>
-</section>
