@@ -52,34 +52,41 @@ form.addEventListener('submit', function() {
     <div class="container">
         <h2>Запази час</h2>
 
-        <form class="booking-form">
+        <form 
+  class="booking-form"
+  action="https://formspree.io/f/xeejogoa"
+  method="POST"
+>
+
+
             <label>Избрана услуга</label>
-            <select id="service" required>
-                <option value="">-- Избери услуга --</option>
-                <option>Външно измиване</option>
-                <option>Външно + пране на салон</option>
-                <option>Пълен салон + табло</option>
-                <option>Пълен детайлинг + моторен кош</option>
-                <option>Външно полиране</option>
-            </select>
+<select id="service" name="Услуга" required>
+    <option value="">-- Избери услуга --</option>
+    <option value="external">Външно измиване</option>
+    <option value="ext_interior">Външно + пране на салон</option>
+    <option value="full_interior">Пълен салон + табло</option>
+    <option value="full_detailing">Пълен детайлинг + моторен кош</option>
+    <option value="polishing">Външно полиране</option>
+</select>
 
-            <label>Дата</label>
-            <input type="date" id="date" required>
+<label>Дата</label>
+<input type="date" id="date" name="Дата" required>
 
-            <label>Час</label>
-            <input type="time" id="time" required>
+<label>Час</label>
+<input type="time" id="time" name="Час" required>
 
-            <label>Име</label>
-            <input type="text" id="name" placeholder="Вашето име" required>
+<label>Име</label>
+<input type="text" id="name" name="Име" required>
 
-            <label>Телефон</label>
-            <input type="tel" id="phone" placeholder="+359..." required>
+<label>Телефон</label>
+<input type="tel" id="phone" name="Телефон" required>
 
-            <label>Автомобил</label>
-            <input type="text" id="car" placeholder="Марка и модел">
+<label>Автомобил</label>
+<input type="text" id="car" name="Автомобил">
 
-            <button type="submit">Изпрати запитване</button>
-        </form>
+<button type="submit">Изпрати запитване</button>
+
+</form>
     </div>
 </section>
 
