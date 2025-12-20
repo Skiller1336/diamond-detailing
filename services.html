@@ -1,181 +1,36 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-    <meta charset="UTF-8">
-    <title>Услуги | Diamond Detailing</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #1c1c1c;
-            color: #e0e0e0;
-            margin: 0;
-        }
-        .container {
-            width: 90%;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 0;
-        }
-        header {
-            background-color: #111;
-            padding: 20px 0;
-        }
-        header .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 1.8em;
-            font-weight: bold;
-            color: #fff;
-        }
-        .logo span {
-            color: #f0c330;
-        }
-        nav a {
-            color: #e0e0e0;
-            text-decoration: none;
-            margin-left: 25px;
-            font-weight: 500;
-        }
-        nav a:hover {
-            color: #f0c330;
-        }
-
-        h2 {
-            text-align: center;
-            color: #f0c330;
-            margin-bottom: 30px;
-            font-size: 2em;
-        }
-
-        .service-btn {
-            display: block;
-            background-color: #2a2a2a;
-            color: #f0c330;
-            text-decoration: none;
-            padding: 20px;
-            margin: 15px 0;
-            text-align: center;
-            border-radius: 8px;
-            font-size: 1.2em;
-            transition: background 0.3s, transform 0.2s;
-        }
-
-        .service-btn:hover {
-            background-color: #333;
-            transform: scale(1.03);
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px 0;
-            background-color: #111;
-            color: #777;
-            margin-top: 40px;
-        }
-
-        @media(max-width:600px){
-            header .container {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            nav a {
-                margin-left: 0;
-                margin-top: 10px;
-            }
-        }
-    </style>
+<meta charset="UTF-8">
+<title>Услуги | Diamond Detailing</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-    <div class="container">
-        <div class="logo">DIAMOND <span>DETAILING</span></div>
-        <nav>
-            <a href="index.html">Начало</a>
-            <a href="services.html">Услуги</a>
-            <a href="prices.html">Цени</a>
-            <a href="gallery.html">Галерия</a>
-            <a href="contact.html">Контакти</a>
-        </nav>
-    </div>
-</header>
-
-<div class="container">
-    <h2>Нашите услуги</h2>
-
-    <a href="contact.html?service=Външно измиване" class="service-btn">Външно измиване – 20 лв</a>
-    <a href="contact.html?service=Външно + пране на салон" class="service-btn">Външно + пране на салон – 50 лв</a>
-    <a href="contact.html?service=Външно + пране на салон + детайлинг на табло и бутони" class="service-btn">Пълен салон + детайлинг табло – 80 лв</a>
-    <a href="contact.html?service=Външно + пране на салон + детайлинг табло + моторен кош" class="service-btn">Пълен детайлинг с моторен кош – 120 лв</a>
-    <a href="contact.html?service=Външно полиране" class="service-btn">Външно полиране – 70 лв</a>
-</div>
-
-<footer>
-    <p>Diamond Detailing – Варна, кв. Левски</p>
-</footer>
-
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="bg">
-<head>
-    <meta charset="UTF-8">
-    <title>Услуги | Diamond Detailing</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<header>
-    <div class="container">
-        <div class="logo">DIAMOND <span>DETAILING</span></div>
-        <nav>
-            <a href="index.html">Начало</a>
-            <a href="services.html">Услуги</a>
-            <a href="prices.html">Цени</a>
-            <a href="gallery.html">Галерия</a>
-            <a href="contact.html">Контакти</a>
-        </nav>
-    </div>
-</header>
+<header>...</header>
 
 <section>
-    <div class="container">
-        <h2>Нашите услуги</h2>
+<div class="container">
+<h2>Нашите услуги</h2>
 
-        <a class="service-btn" href="contact.html?service=external">
-    <span>Външно измиване</span>
-    <strong>20 лв</strong>
-</a>
+<div class="cards">
+  <div class="service-card">
+    <img src="images/service1.jpg">
+    <h3>Външно измиване</h3>
+    <p>Ръчно измиване с професионални препарати</p>
+    <a href="contact.html?service=external">Запази – 20 лв</a>
+  </div>
 
-<a class="service-btn" href="contact.html?service=ext_interior">
-    <span>Външно + пране на салон</span>
-    <strong>50 лв</strong>
-</a>
+  <div class="service-card">
+    <img src="images/service2.jpg">
+    <h3>Пълен детайлинг</h3>
+    <p>Интериор + екстериор + защита</p>
+    <a href="contact.html?service=full_detailing">Запази – 120 лв</a>
+  </div>
+</div>
 
-<a class="service-btn" href="contact.html?service=full_interior">
-    <span>Пълен салон + табло</span>
-    <strong>80 лв</strong>
-</a>
-
-<a class="service-btn" href="contact.html?service=full_detailing">
-    <span>Пълен детайлинг + моторен кош</span>
-    <strong>120 лв</strong>
-</a>
-
-<a class="service-btn" href="contact.html?service=polishing">
-    <span>Външно полиране</span>
-    <strong>70 лв</strong>
-        </a>
-    </div>
+</div>
 </section>
-
-<footer>
-    <p>Diamond Detailing – Варна</p>
-</footer>
 
 </body>
 </html>

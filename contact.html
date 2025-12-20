@@ -52,11 +52,35 @@ form.addEventListener('submit', function() {
     <div class="container">
         <h2>Запази час</h2>
 
-        <form 
-  class="booking-form"
-  action="https://formspree.io/f/xeejogoa"
-  method="POST"
->
+        <form class="booking-form"
+ action="https://formspree.io/f/XXXXXXX"
+ method="POST">
+
+<label>Услуга</label>
+<select name="Услуга" id="service">
+  <option value="external">Външно измиване</option>
+  <option value="full_detailing">Пълен детайлинг</option>
+</select>
+
+<label>Дата</label>
+<input type="date" name="Дата">
+
+<label>Час</label>
+<input type="time" name="Час">
+
+<label>Име</label>
+<input type="text" name="Име">
+
+<label>Телефон</label>
+<input type="tel" name="Телефон">
+
+<button type="submit">Изпрати</button>
+</form>
+
+<script>
+const s = new URLSearchParams(location.search).get('service');
+if (s) document.getElementById('service').value = s;
+</script>
 
 
             <label>Избрана услуга</label>
